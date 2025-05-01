@@ -48,7 +48,7 @@ function getUserLocation(){
 getUserLocation()
 async function getWeatherByLatAndLon(location){
    let response = await fetch
-   (`httpS://api.weatherapi.com/v1/forecast.json?key=42470ce511ef4c9786e151959252904&q=${location}&days=7`)
+   (`https://api.weatherapi.com/v1/forecast.json?key=42470ce511ef4c9786e151959252904&q=${location}&days=7`)
    let data = await response.json()
    displayTodayWeather(data)    
 }
