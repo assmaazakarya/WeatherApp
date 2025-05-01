@@ -48,7 +48,7 @@ function getUserLocation(){
 getUserLocation()
 async function getWeatherByLatAndLon(location){
    let response = await fetch
-   (`http://api.weatherapi.com/v1/forecast.json?key=42470ce511ef4c9786e151959252904&q=${location}&days=7`)
+   (`httpS://api.weatherapi.com/v1/forecast.json?key=42470ce511ef4c9786e151959252904&q=${location}&days=7`)
    let data = await response.json()
    displayTodayWeather(data)    
 }
@@ -95,7 +95,7 @@ function displayTodayWeather(data){
     
 }
 async function searchWeather(city) {
-   let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=42470ce511ef4c9786e151959252904&q=${city}&days=7`) 
+   let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=42470ce511ef4c9786e151959252904&q=${city}&days=7`) 
    let data = await response.json()
    displayTodayWeather(data)
 }
